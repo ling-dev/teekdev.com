@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, shrink-to-fit=0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Teek Dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Rajdhani:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="public/stylesheets/main.css" />
+    <script
+      src="https://kit.fontawesome.com/31ed24e985.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="loader">
+      <div class="loader__top"></div>
+      <div class="loader__middle"></div>
+      <div class="loader__bottom"></div>
+    </div>
+
+    <!-- Header -->
+
+    <header class="site-header container--wide">
+      <!-- Logo -->
+
+      <div>
+        <a href="https://teekdev.com" id="site-logo"> <b>TEEK</b>DEV </a>
+      </div>
+
+      <div class="main-nav__toggler">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+
+    <!-- Nav -->
+
+    <nav class="main-nav" aria-label="Main">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <i class="fa-regular fa-circle-xmark"></i>
+        </li>
+        <li class="main-nav__item">
+          <a href="#hero" class="main-nav__link">Home</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#about" class="main-nav__link">About me</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#work" class="main-nav__link">Work</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#contact" class="main-nav__link">Contact</a>
+        </li>
+      </ul>
+      <div class="js-polygon polygon-1 polygon__shape--1"></div>
+      <div class="js-polygon polygon-2 polygon__shape--2"></div>
+      <div class="js-polygon polygon-3 polygon__shape--3"></div>
+      <div class="js-polygon polygon-4 polygon__shape--4"></div>
+    </nav>
+
+    <!-- Hero section -->
+
+    <div id="hero">
+      <div class="container--wide">
+        <div class="hero__text-wrapper">
+          <h4 class="js-hero__welcome">Welcome to my creative space</h4>
+          <h1 class="hero__copy">
+            I'm Ling, a front-end developer passionate about creating custom web
+            experience
+          </h1>
+        </div>
+      </div>
+      <div class="js-polygon polygon-1 polygon__shape--1"></div>
+      <div class="js-polygon polygon-2 polygon__shape--2"></div>
+      <div class="js-polygon polygon-3 polygon__shape--3"></div>
+      <div class="js-polygon polygon-4 polygon__shape--4"></div>
+    </div>
+
+    <!-- Canvas -->
+    <div id="js-canvas__wrapper">
+      <div id="canvas-container">
+        <span id="js-canvas__bg"></span>
+        <p class="canvas__copy">Press or touch...</p>
+      </div>
+    </div>
+
+    <!-- Zig-zag background decoration -->
+
+    <div class="zig-zag-bg"></div>
+
+    <!-- Wrapping everything after the canvas -->
+
+    <div class="wrapping-about-work-contact">
+      <!-- About section -->
+
+      <div id="about">
+        <div class="container--regular">
+          <div class="about__body">
+            <h1 class="about__title">
+              I'm a
+              <span class="has-line-through">teek</span>
+              <span class="about__title-handwrite">web dev</span>
+              who loves to turn ideas into reality with
+              <span class="has-line-through">telekinesis</span>
+              <span class="about__title-handwrite">coding</span>
+            </h1>
+
+            <p class="about__copy">
+              I'm a passionate front-end developer based out of Birmingham, UK.
+            </p>
+
+            <p class="about__copy">
+              I strive to design and build modern, interactive websites that
+              provide engaged and memorable user experience. I have been working
+              with some new businesses to build their online presence, managing
+              the process from server setup to coding the website. In each
+              project I try to write readable, modular code that are easy to
+              maintain and scale.
+            </p>
+
+            <p class="about__copy">
+              Most importantly, I am <b>available for hire</b>. If you think I
+              can help you, please send me an email and I will get back to you
+              quickly.
+            </p>
+            <div class="about__buttons">
+              <a
+                href="mailto:ling@teekdev.com"
+                class="about__hire-me-button button"
+              >
+                <span class="button__prepend">
+                  <i class="fa-solid fa-envelope"></i>
+                </span>
+                <span class="button__body">Hire me</span>
+              </a>
+              <!-- <a href="#" class="about__cv-button button">
+                <span class="button__prepend">
+                  <i class="fa-solid fa-file"></i>
+                </span>
+                <span class="button__body">CV</span>
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Work section -->
+
+      <div id="work">
+        <div class="container--wide">
+          <h2 class="work__section-title">Work</h2>
+
+          <div class="work-card__wrapper">
+            <!-- Joyful TCM Services -->
+
+            <article class="work-card">
+              <aside class="work-card__aside">
+                <figure class="work-card__figure">
+                  <a href="https://joytcm.co.uk/en/" target="_blank">
+                    <img
+                      src="./img/work_joytcm.jpg"
+                      alt="Featured image"
+                      class="work-card__image"
+                    />
+                  </a>
+                </figure>
+              </aside>
+              <header class="work-card__header">
+                <h3 class="work-card__title">Joyful TCM Service</h3>
+              </header>
+              <div class="work-card__body">
+                <p class="work-card__copy">
+                  Joyful TCM Service is a traditional Chinese medicine clinic
+                  based in London, UK. The client needed a new, bespoke website
+                  that showcases their services while matching their brand
+                  identity. It also needed to be a bilingual website to help
+                  them reach a wider audience in the country.
+                  <span class="work-card__copy-subtitle">My role</span>
+                  Website design, development
+                  <span class="work-card__copy-subtitle">Technology</span>
+                  HTML, CSS, JavaScript, WordPress
+                  <span class="work-card__copy-subtitle">Visit project</span>
+                  <a
+                    href="https://joytcm.co.uk/en/"
+                    target="_blank"
+                    class="work-card__link"
+                  >
+                    joytcm.co.uk (work in progress)
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </p>
+              </div>
+            </article>
+
+            <!-- Villans Club -->
+
+            <article class="work-card">
+              <aside class="work-card__aside">
+                <figure class="work-card__figure">
+                  <a href="https://villans.club/en/" target="_blank">
+                    <img
+                      src="./img/work_villans-club.jpg"
+                      alt="Featured image"
+                      class="work-card__image"
+                    />
+                  </a>
+                </figure>
+              </aside>
+              <header class="work-card__header">
+                <h3 class="work-card__title">Villans Club</h3>
+              </header>
+              <div class="work-card__body">
+                <p class="work-card__copy">
+                  The Villans Club is an Aston Villa supporters' club which I
+                  founded in early 2023. It was built with WordPress utilising
+                  its Full Site Editing feature. The website is bilingual as I
+                  hope it will be a platform for the supporters to come together
+                  and share unforgettable moments from wherever they are based.
+                  <span class="work-card__copy-subtitle">My role</span>
+                  Website design, development, branding, illustration
+                  <span class="work-card__copy-subtitle">Technology</span>
+                  HTML, CSS, JavaScript, WordPress, Discourse
+                  <span class="work-card__copy-subtitle">Visit project</span>
+                  <a
+                    href="https://villans.club/en/"
+                    target="_blank"
+                    class="work-card__link"
+                  >
+                    villans.club
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </p>
+              </div>
+            </article>
+
+            <!-- Teek Dev -->
+
+            <article class="work-card">
+              <aside class="work-card__aside">
+                <figure class="work-card__figure">
+                  <img
+                    src="./img/work_teekdev.jpg"
+                    alt="Featured image"
+                    class="work-card__image"
+                  />
+                </figure>
+              </aside>
+              <header class="work-card__header">
+                <h3 class="work-card__title">Portfolio 2023</h3>
+              </header>
+              <div class="work-card__body">
+                <p class="work-card__copy">
+                  You're viewing this now. It is my own portfolio website to
+                  showcase my latest work and let people know more about me.
+                  <span class="work-card__copy-subtitle">My role</span>
+                  Website design, development, branding
+                  <span class="work-card__copy-subtitle">Technology</span>
+                  HTML, CSS, JavaScript, Sass, GSAP, canvas-sketch
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact section -->
+
+      <div id="contact">
+        <h2 class="contact__section-title-stroke">Contact</h2>
+        <span class="contact__section-title-fill">Contact</span>
+        <div class="js-contact__wrapper">
+          <img
+            src="./img/profile-pic.jpg"
+            alt="Profile picture"
+            class="contact__profile-pic"
+          />
+          <a href="mailto:ling@teekdev.com" class="contact__email"
+            >ling@teekdev.com</a
+          >
+
+          <div class="contact__info">
+            <p>
+              I am passionate about creating fun, creative websites with
+              functionality at its core. Don't hesitate to get in touch if you'd
+              like to work with me on a project, or just to say hi.
+            </p>
+            <p>I'm currently <b>available for hire</b>.</p>
+            <hr />
+            <p>© 2023 teekdev.com</p>
+            <!-- <p><i class="fa-brands fa-linkedin-in"></i></p> -->
+          </div>
+
+          <div class="js-polygon polygon-1 polygon__shape--1"></div>
+          <div class="js-polygon polygon-2 polygon__shape--2"></div>
+          <div class="js-polygon polygon-3 polygon__shape--3"></div>
+          <div class="js-polygon polygon-4 polygon__shape--4"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Observer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/EaselPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/PixiPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
+    <script src="hero-section.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: "Rajdhani", sans-serif !default;
+// $text-font-stack: "Open Sans", "Helvetica Neue Light", "Helvetica Neue",
+//   "Helvetica", "Arial", sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+  "Monaco", monospace !default;
+
+/// Font size
+$font-size-display-large-fallback: 5rem;
+$font-size-display-large: clamp(5rem, 3rem + 10vw, 15rem); // 80px - 240px
+$font-size-display-medium-fallback: 3.5rem;
+$font-size-display-medium: clamp(3.5rem, 3.1rem + 2vw, 5.5rem); // 56px - 88px
+$font-size-display-small-fallback: 3rem;
+$font-size-display-small: clamp(3rem, 2.7rem + 1.5vw, 4.5rem); // 48px - 72px
+
+$font-size-headline-large-fallback: 2.5rem;
+$font-size-headline-large: clamp(2.5rem, 2.2rem + 1.5vw, 4rem); // 40px - 64px
+$font-size-headline-medium-fallback: 2.25rem;
+$font-size-headline-medium: clamp(2.25rem, 2rem + 1.25vw, 3.5rem);
+// 36px - 56px
+$font-size-headline-small-fallback: 2rem;
+$font-size-headline-small: clamp(2rem, 1.8rem + 1vw, 3rem); // 32px - 48px
+
+$font-size-title-large-fallback: 1.85rem;
+$font-size-title-large: clamp(
+  1.85rem,
+  1.7200000000000002rem + 0.6499999999999999vw,
+  2.5rem
+); // 29.6px - 40px
+$font-size-title-medium-fallback: 1.75rem;
+$font-size-title-medium: clamp(
+  1.75rem,
+  1.65rem + 0.5vw,
+  2.25rem
+); // 28px - 36px
+$font-size-title-small-fallback: 1.65rem;
+$font-size-title-small: clamp(
+  1.65rem,
+  1.5799999999999998rem + 0.3500000000000001vw,
+  2rem
+);
+// 26.4px -32px
+
+$font-size-body-large-fallback: 1.5rem;
+$font-size-body-large: clamp(1.5rem, 1.45rem + 0.25vw, 1.75rem); // 24px - 28px
+$font-size-body-medium-fallback: 1.25rem;
+$font-size-body-medium: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem); // 20px - 24px
+$font-size-body-small-fallback: 1rem;
+$font-size-body-small: clamp(1rem, 0.95rem + 0.25vw, 1.25rem); // 16px - 20px
+
+$font-size-label-large-fallback: 0.9rem;
+$font-size-label-large: clamp(
+  0.9rem,
+  0.88rem + 0.09999999999999998vw,
+  1rem
+); // 14.4px - 16px
+$font-size-label-medium-fallback: 0.8rem;
+$font-size-label-medium: clamp(
+  0.8rem,
+  0.78rem + 0.09999999999999998vw,
+  0.9rem
+); // 12.8px - 14.4px
+$font-size-label-small-fallback: 0.7rem;
+$font-size-label-small: clamp(
+  0.7rem,
+  0.6799999999999999rem + 0.10000000000000009vw,
+  0.8rem
+); // 11.2px - 12.8px
+
+// base font size - applied at body / html level
+$font-size-base: $font-size-body-medium;
+
+/// Color palette
+/// @type Color
+$color-dark-violet: hsl(268.2, 58.6%, 11.4%); // #1c0c2e
+$color-soft-violet: hsl(255.8, 84.4%, 64.7%); // #8159f1
+$color-light-magenta: hsl(303, 100%, 76.1%); // #ff85f9
+$color-soft-orange: hsl(30.8, 61.3%, 64.5%); // #dca66d
+
+// Neutral colors
+
+$color-ntrl-min: hsl(0, 0%, 100%); // #fff
+$color-ntrl-max: hsl(0, 0%, 0%); // #000
+
+// Base color
+
+$color-base: $color-dark-violet;
+$color-base-light: mix(white, $color-base, 20%);
+$color-base-lighter: mix(white, $color-base, 40%);
+$color-base-dark: mix(black, $color-base, 20%);
+$color-base-darker: mix(black, $color-base, 40%);
+
+// Primary color
+
+$color-primary: $color-soft-violet;
+$color-primary-light: mix(white, $color-primary, 20%);
+$color-primary-lighter: mix(white, $color-primary, 40%);
+$color-primary-dark: mix(black, $color-primary, 20%);
+$color-primary-darker: mix(black, $color-primary, 40%);
+
+// Secondary color
+
+$color-secondary: $color-light-magenta;
+$color-secondary-light: mix(white, $color-secondary, 20%);
+$color-secondary-lighter: mix(white, $color-secondary, 40%);
+$color-secondary-dark: mix(black, $color-secondary, 20%);
+$color-secondary-darker: mix(black, $color-secondary, 40%);
+
+// Tertiary color
+
+$color-tertiary: $color-soft-orange;
+$color-tertiary-light: mix(white, $color-tertiary, 20%);
+$color-tertiary-lighter: mix(white, $color-tertiary, 40%);
+$color-tertiary-dark: mix(black, $color-tertiary, 20%);
+$color-tertiary-darker: mix(black, $color-tertiary, 40%);
+
+/// Copy text color
+/// @type Color
+$text-color: $color-ntrl-min !default;
+
+/// Container's maximum width
+/// @type Length
+$width-wide: 1600px !default;
+$width-regular: 1200px;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  "small": (
+    min-width: 320px,
+  ),
+  "medium": (
+    min-width: 768px,
+  ),
+  "large": (
+    min-width: 1024px,
+  ),
+) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'https://cdn.example.com/assets/';
+$base-url: "/assets/" !default;

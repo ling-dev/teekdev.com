@@ -1,0 +1,662 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+/*------------------------------------*\
+  #Z-INDEX
+  Loader when active: 9999
+  Loader when inactive: -9999
+  Site header: 999
+  Main nav: 8888
+  Contact section title - stroke: 1
+  Contact section title - fill: -1
+  Polygons: -10
+  Canvas instruction copy when active: 99
+  Canvas instruction copy when inactive: -99
+\*------------------------------------*/
+
+/*------------------------------------*\
+  #LOADER SECTION
+\*------------------------------------*/
+
+#loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: $color-ntrl-max;
+  z-index: 9999;
+}
+
+.loader__top {
+  width: 100%;
+  height: 55%;
+  background-color: $color-base-darker;
+}
+
+.loader__middle {
+  width: 100%;
+  height: 30%;
+  background-color: $color-base-dark;
+}
+
+.loader__bottom {
+  width: 100%;
+  height: 15%;
+  background-color: $color-base;
+}
+
+/*------------------------------------*\
+  #HERO SECTION
+\*------------------------------------*/
+
+#hero {
+  position: relative;
+}
+
+.hero__text-wrapper {
+  max-width: 100%;
+  padding-top: 100px;
+
+  @include respond-to("medium") {
+    max-width: 85%;
+  }
+
+  @include respond-to("large") {
+    max-width: 70%;
+  }
+}
+
+/**
+ * Hero welcome text using gradient as a text color
+ * 1. Set a background color as fallback
+ * 2. Create the gradient
+ * 3. Use the text as a mask for the background
+ */
+
+%linear-gradient {
+  background-color: $color-primary; /* 1 */
+  background-image: linear-gradient(
+    180deg,
+    $color-secondary 5%,
+    $color-primary 90%
+  ); /* 2 */
+  background-size: 100%;
+  background-repeat: repeat;
+}
+
+%bg-clip-text {
+  background-clip: text; /* 3 */
+  -webkit-background-clip: text;
+  color: transparent; /* 3 */
+  -webkit-text-fill-color: transparent;
+}
+
+.js-hero__welcome {
+  @extend %linear-gradient;
+  @extend %bg-clip-text;
+}
+
+.hero__copy {
+  margin: 0;
+}
+
+/*------------------------------------*\
+  #CANVAS SECTION
+\*------------------------------------*/
+
+#js-canvas__wrapper {
+  max-width: 1920px;
+  max-height: 1920px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#canvas-container {
+  position: relative;
+  clip-path: circle(50%);
+}
+
+#canvas-container canvas {
+  position: relative;
+  width: 100%;
+  min-width: 1280px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/**
+ * To be used as a background when the canvas is hidden
+ * 1. Same width and height as the canvas
+ * 2. Set a background color as fallback
+ * 3. Create the gradient
+ */
+#js-canvas__bg {
+  @extend %linear-gradient;
+
+  position: absolute;
+  width: 1920px; /* 1 */
+  height: 1920px; /* 1 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.canvas__copy {
+  width: fit-content;
+  block-size: fit-content;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  font-style: italic;
+  font-weight: 700;
+  animation: 3s ease-in-out infinite blinking;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*------------------------------------*\
+  #AFTER CANVAS
+\*------------------------------------*/
+
+.zig-zag-bg {
+  width: 100%;
+  height: 150px;
+  clip-path: polygon(
+    61% 19%,
+    51% 74%,
+    100% 0,
+    100% 100%,
+    0 100%,
+    27% 40%,
+    23% 74%
+  );
+  background-color: $color-ntrl-max;
+}
+
+.wrapping-about-work-contact {
+  width: 100%;
+  background-color: $color-ntrl-max;
+}
+
+/*------------------------------------*\
+  #ABOUT SECTION
+\*------------------------------------*/
+
+.about__body {
+  color: $color-ntrl-min;
+}
+
+.about__title {
+  @extend %linear-gradient;
+  @extend %bg-clip-text;
+  margin-top: 0;
+  font-size: $font-size-headline-medium-fallback;
+  font-size: $font-size-headline-medium;
+  text-align: center;
+}
+
+.about__title-handwrite {
+  font-family: "Dancing Script", cursive;
+  color: $color-ntrl-min;
+  -webkit-text-fill-color: $color-ntrl-min;
+  font-size: $font-size-display-small-fallback;
+  font-size: $font-size-display-small;
+}
+
+.has-line-through {
+  text-decoration: $color-ntrl-min 3px wavy line-through;
+}
+
+.about__copy {
+  width: 100%;
+  text-align: left;
+
+  @include respond-to("medium") {
+    padding: 0 10%;
+  }
+
+  @include respond-to("large") {
+    padding: 0 20%;
+  }
+}
+
+.about__buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.about__hire-me-button {
+  margin-right: 20px;
+  background-color: $color-primary-darker;
+  border: 1px solid $color-ntrl-min;
+  color: $color-ntrl-min;
+  font-weight: 700;
+
+  &:hover {
+    background-color: $color-primary-dark;
+    color: $color-ntrl-min;
+    text-decoration: none;
+  }
+}
+
+.about__cv-button {
+  color: $color-ntrl-min;
+  border: 1px solid $color-ntrl-min;
+
+  &:hover {
+    color: $color-secondary;
+    border: 1px solid $color-secondary;
+
+    text-decoration: none;
+  }
+}
+
+.button__prepend {
+  margin-right: 10px;
+}
+
+/*------------------------------------*\
+  #WORK SECTION
+\*------------------------------------*/
+
+#work {
+  padding: 100px 0 50px 0;
+}
+
+.work__section-title {
+  width: 100%;
+  margin: 0;
+  font-size: $font-size-display-large-fallback;
+  font-size: $font-size-display-large;
+  text-align: center;
+  color: $color-ntrl-max;
+  -webkit-text-stroke: 3px $color-secondary;
+  text-stroke: 3px $color-secondary;
+  animation-duration: 3s;
+  animation-name: changeStrokeColor;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes changeStrokeColor {
+  0% {
+    -webkit-text-stroke: 3px $color-secondary;
+    text-stroke: 3px $color-secondary;
+  }
+  50% {
+    -webkit-text-stroke: 3px $color-primary;
+    text-stroke: 3px $color-primary;
+  }
+  100% {
+    -webkit-text-stroke: 3px $color-secondary;
+    text-stroke: 3px $color-secondary;
+  }
+}
+
+.work-card__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.work-card {
+  max-width: 420px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.work-card__figure {
+  max-width: 420px;
+  max-height: 570px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.work-card__image {
+  width: 420px;
+  height: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) scale(1.1);
+  }
+}
+
+.work-card__copy-subtitle {
+  display: block;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+.work-card__link {
+  color: $color-ntrl-min;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/*------------------------------------*\
+  #CONTACT SECTION
+\*------------------------------------*/
+
+#contact {
+  position: relative;
+  perspective: 1200px;
+  height: 1000px;
+  // background-color: red;
+}
+
+%contact__section-title {
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: $font-size-display-large-fallback;
+  font-size: $font-size-display-large;
+
+  text-align: center;
+  line-height: 100%;
+}
+
+.contact__section-title-stroke {
+  @extend %contact__section-title;
+  color: transparent;
+  -webkit-text-stroke: 1px $color-ntrl-min;
+  text-stroke: 1px $color-ntrl-min;
+  z-index: 1;
+}
+.contact__section-title-fill {
+  @extend %contact__section-title;
+  color: $color-ntrl-min;
+  z-index: -1;
+}
+
+.js-contact__wrapper {
+  position: relative;
+  top: 50px;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  border-top: 3px solid $color-ntrl-min;
+  background-color: $color-base-darker;
+
+  @include respond-to("medium") {
+    top: 70px;
+  }
+
+  @include respond-to("large") {
+    top: 90px;
+  }
+}
+
+.contact__profile-pic {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  width: 250px;
+}
+
+.contact__info {
+  width: 500px;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: $font-size-body-small-fallback;
+  font-size: $font-size-body-small;
+}
+
+.contact__email {
+  display: block;
+  width: 100%;
+  font-size: $font-size-headline-small-fallback;
+  font-size: $font-size-headline-small;
+  text-align: center;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/*------------------------------------*\
+  #POLYGON SHAPES
+\*------------------------------------*/
+
+%polygon {
+  z-index: -10;
+  position: absolute;
+  transition: all 1s ease-in-out;
+}
+
+.polygon-1 {
+  @extend %polygon;
+  left: -5%;
+  top: -5%;
+  width: 30vw;
+  height: 30vw;
+  max-width: 400px;
+  max-height: 400px;
+  opacity: 0.3;
+  background-color: $color-primary-light;
+  transition: all 1s ease-in-out;
+  transform: rotate(30deg);
+}
+
+.polygon-2 {
+  @extend %polygon;
+  right: 3%;
+  top: 30%;
+  width: 50vw;
+  height: 50vw;
+  max-width: 600px;
+  max-height: 600px;
+  opacity: 0.2;
+  background-color: $color-tertiary-lighter;
+  transition: all 2s ease-in-out;
+}
+
+.polygon-3 {
+  @extend %polygon;
+  left: 5%;
+  bottom: 15%;
+  width: 15vw;
+  height: 15vw;
+  max-width: 250px;
+  max-height: 250px;
+  opacity: 0.3;
+  background-color: $color-ntrl-min;
+  transition: all 2s ease-in-out;
+  transform: rotate(70deg);
+}
+
+.polygon-4 {
+  @extend %polygon;
+  right: 10%;
+  top: 15%;
+  width: 20vw;
+  height: 20vw;
+  max-width: 300px;
+  max-height: 300px;
+  opacity: 0.2;
+  background-color: $color-secondary;
+  transition: all 1s ease-in-out;
+  transform: rotate(20deg);
+}
+
+/* Triangle */
+.polygon__shape--1 {
+  clip-path: polygon(
+    50% 0%,
+    50% 0%,
+    50% 0%,
+    50% 0%,
+    50% 0%,
+    50% 0%,
+    50% 0%,
+    0% 100%,
+    100% 100%
+  );
+}
+
+/* Trapezoid */
+.polygon__shape--2 {
+  clip-path: polygon(
+    20% 0%,
+    20% 0%,
+    20% 0%,
+    20% 0%,
+    20% 0%,
+    20% 0%,
+    80% 0%,
+    100% 100%,
+    0% 100%
+  );
+}
+
+/* Parallelogram */
+.polygon__shape--3 {
+  clip-path: polygon(
+    25% 0%,
+    25% 0%,
+    25% 0%,
+    25% 0%,
+    25% 0%,
+    25% 0%,
+    100% 0%,
+    75% 100%,
+    0% 100%
+  );
+}
+
+/* Rhombus */
+.polygon__shape--4 {
+  clip-path: polygon(
+    50% 0%,
+    50% 0%,
+    50% 0%,
+    50% 0%,
+    50% 0%,
+    50% 0%,
+    100% 50%,
+    50% 100%,
+    0% 50%
+  );
+}
+
+/* Pentagon */
+.polygon__shape--5 {
+  clip-path: polygon(
+    50% 0%,
+    50% 0%,
+    50% 0%,
+    50% 0%,
+    50% 0%,
+    100% 38%,
+    82% 100%,
+    18% 100%,
+    0% 38%
+  );
+}
+
+/* Hexagon */
+.polygon__shape--6 {
+  clip-path: polygon(
+    25% 0%,
+    25% 0%,
+    25% 0%,
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+}
+
+/* Heptagon */
+.polygon__shape--7 {
+  clip-path: polygon(
+    50% 0%,
+    50% 0%,
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+}
+
+/* Octagon */
+.polygon__shape--8 {
+  clip-path: polygon(
+    30% 0%,
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+}
+
+/* Nonagon */
+.polygon__shape--9 {
+  clip-path: polygon(
+    50% 0%,
+    83% 12%,
+    100% 43%,
+    94% 78%,
+    68% 100%,
+    32% 100%,
+    6% 78%,
+    0% 43%,
+    17% 12%
+  );
+}
+
+/* Bevel */
+.polygon__shape--10 {
+  clip-path: polygon(
+    20% 0%,
+    20% 0%,
+    80% 0%,
+    100% 20%,
+    100% 80%,
+    80% 100%,
+    20% 100%,
+    0% 80%,
+    0% 20%
+  );
+}

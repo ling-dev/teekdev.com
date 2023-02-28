@@ -1,0 +1,43 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal $font-size-base / 1.4 $text-font-stack;
+}
+
+h1 {
+  font-size: $font-size-headline-large-fallback;
+  font-size: $font-size-headline-large;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: $font-size-headline-medium-fallback;
+  font-size: $font-size-headline-medium;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: $font-size-headline-small-fallback;
+  font-size: $font-size-headline-small;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: $font-size-title-large-fallback;
+  font-size: $font-size-title-large;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: $font-size-title-medium-fallback;
+  font-size: $font-size-title-medium;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: $font-size-title-small-fallback;
+  font-size: $font-size-title-small;
+  font-weight: 400;
+}
