@@ -12,8 +12,7 @@
   Contact section title - stroke: 1
   Contact section title - fill: -1
   Polygons: -10
-  Canvas instruction copy when active: 99
-  Canvas instruction copy when inactive: -99
+  Canvas instruction copy: 99
 \*------------------------------------*/
 
 /*------------------------------------*\
@@ -128,23 +127,6 @@
   transform: translateX(-50%);
 }
 
-/**
- * To be used as a background when the canvas is hidden
- * 1. Same width and height as the canvas
- * 2. Set a background color as fallback
- * 3. Create the gradient
- */
-#js-canvas__bg {
-  @extend %linear-gradient;
-
-  position: absolute;
-  width: 1920px; /* 1 */
-  height: 1920px; /* 1 */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .canvas__copy {
   width: fit-content;
   block-size: fit-content;
@@ -156,6 +138,7 @@
   margin-left: auto;
   font-style: italic;
   font-weight: 700;
+  z-index: 99;
   animation: 3s ease-in-out infinite blinking;
 }
 

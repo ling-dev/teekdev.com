@@ -22,23 +22,6 @@ const heroCanvasScrollTrigger = {
 /* Wait until the whole page is loaded */
 
 window.addEventListener("load", (event) => {
-  /* Hide, resize and reposition canvas container at the beginning */
-  gsap.set("#canvas-container", {
-    opacity: 0,
-    scale: 0.3,
-    yPercent: -30,
-  });
-
-  /* Hide canvas at the beginning */
-  gsap.set("#canvas-container canvas", {
-    opacity: 0,
-  });
-
-  /* Hide text inside canvas */
-  gsap.set(".canvas__copy", {
-    zIndex: -99,
-  });
-
   /* Chain of animations when the whole page is loaded */
   var tl = gsap.timeline();
 
@@ -58,13 +41,6 @@ window.addEventListener("load", (event) => {
 
   /* Hero text animation */
 
-  /* Blinking vertical line at the end of the welcome text */
-  // tl.fromTo(
-  //   ".js-vertical-line",
-  //   { opacity: 1 },
-  //   { duration: 0.5, opacity: 0, yoyo: true, repeat: -1 }
-  // );
-
   tl.from(".js-hero__welcome", {
     duration: 0.5,
     opacity: 0,
@@ -72,42 +48,21 @@ window.addEventListener("load", (event) => {
   tl.from(
     ".hero__copy",
     {
-      duration: 0.5,
+      duration: 1,
       opacity: 0,
     },
     "<"
   );
 
-  /* Show canvas after hero appears */
-  tl.to("#canvas-container", {
-    duration: 1,
-    opacity: 1,
-  });
   /* End of timeline */
-
-  /* Animation of canvas when scrolling */
-
-  gsap.to("#canvas-container", {
-    scrollTrigger: heroCanvasScrollTrigger,
-    scale: 1,
-    yPercent: 0,
-  });
-
-  gsap.to("#canvas-container canvas", {
-    scrollTrigger: heroCanvasScrollTrigger,
-    opacity: 1,
-  });
-  gsap.to(".canvas__copy", {
-    scrollTrigger: heroCanvasScrollTrigger,
-    zIndex: 99,
-  });
-
-  /* Hide pink canvas background when scrolling down */
-  gsap.to("#js-canvas__bg", {
-    scrollTrigger: heroCanvasScrollTrigger,
-    opacity: 0,
-  });
 });
+
+/* Blinking vertical line at the end of the welcome text */
+// tl.fromTo(
+//   ".js-vertical-line",
+//   { opacity: 1 },
+//   { duration: 0.5, opacity: 0, yoyo: true, repeat: -1 }
+// );
 
 /* About section animation */
 

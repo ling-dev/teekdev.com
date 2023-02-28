@@ -560,8 +560,7 @@ h6 {
   Contact section title - stroke: 1
   Contact section title - fill: -1
   Polygons: -10
-  Canvas instruction copy when active: 99
-  Canvas instruction copy when inactive: -99
+  Canvas instruction copy: 99
 \*------------------------------------*/
 /*------------------------------------*\
   #LOADER SECTION
@@ -623,7 +622,6 @@ h6 {
  * 3. Use the text as a mask for the background
  */
 .about__title,
-#js-canvas__bg,
 .js-hero__welcome {
   background-color: hsl(255.8deg, 84.4%, 64.7%); /* 1 */
   background-image: linear-gradient(
@@ -672,21 +670,6 @@ h6 {
   transform: translateX(-50%);
 }
 
-/**
- * To be used as a background when the canvas is hidden
- * 1. Same width and height as the canvas
- * 2. Set a background color as fallback
- * 3. Create the gradient
- */
-#js-canvas__bg {
-  position: absolute;
-  width: 1920px; /* 1 */
-  height: 1920px; /* 1 */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .canvas__copy {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -702,6 +685,7 @@ h6 {
   margin-left: auto;
   font-style: italic;
   font-weight: 700;
+  z-index: 99;
   -webkit-animation: 3s ease-in-out infinite blinking;
   animation: 3s ease-in-out infinite blinking;
 }
