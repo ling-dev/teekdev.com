@@ -190,7 +190,6 @@ const onMouseUp = (e) => {
 };
 
 const handleStart = (e) => {
-  e.preventDefault();
   window.addEventListener("touchend", handleEnd);
 
   const mouseX = null;
@@ -202,8 +201,6 @@ const handleStart = (e) => {
   updatePt(circles, mouseX, mouseY);
 };
 const handleEnd = (e) => {
-  e.preventDefault();
-
   const mouseX = null;
   const mouseY = null;
 

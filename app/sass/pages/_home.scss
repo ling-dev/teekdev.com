@@ -6,8 +6,9 @@
   #Z-INDEX
   Loader when active: 9999
   Loader when inactive: -9999
-  Site header: 999
-  Main nav: 8888
+  Site header: 800
+  Nav toggler: 900
+  Main nav: 999
   Contact section title - stroke: 1
   Contact section title - fill: -1
   Polygons: -10
@@ -220,7 +221,10 @@
 }
 
 .has-line-through {
-  text-decoration: $color-ntrl-min 3px wavy line-through;
+  text-decoration-color: $color-ntrl-min;
+  text-decoration-line: line-through;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 3px;
 }
 
 .about__copy {
@@ -408,6 +412,7 @@
   height: 100%;
   border-top: 3px solid $color-ntrl-min;
   background-color: $color-base-darker;
+  overflow: hidden;
 
   @include respond-to("medium") {
     top: 70px;
@@ -486,7 +491,7 @@
 .polygon-3 {
   @extend %polygon;
   left: 5%;
-  bottom: 15%;
+  bottom: -15%;
   width: 15vw;
   height: 15vw;
   max-width: 250px;

@@ -107,12 +107,6 @@ window.addEventListener("load", (event) => {
     scrollTrigger: heroCanvasScrollTrigger,
     opacity: 0,
   });
-
-  /* Change body background color when scrolling down */
-  gsap.to("body", {
-    scrollTrigger: heroCanvasScrollTrigger,
-    backgroundColor: "hsl(268.2, 58.6%, 11.4%)",
-  });
 });
 
 /* About section animation */

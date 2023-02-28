@@ -346,7 +346,7 @@ a:focus-within {
 }
 
 body {
-  background-color: hsl(0deg, 0%, 0%);
+  background-color: hsl(268.2deg, 58.6%, 11.4%);
   overflow-x: hidden;
 }
 
@@ -466,7 +466,7 @@ h6 {
   justify-content: space-between;
   top: 30px;
   width: 100%;
-  z-index: 999;
+  z-index: 800;
 }
 
 #site-logo {
@@ -481,6 +481,7 @@ h6 {
   color: hsl(0deg, 0%, 100%);
   font-size: 1.75rem;
   font-size: clamp(1.75rem, 1.65rem + 0.5vw, 2.25rem);
+  z-index: 900;
 }
 .main-nav__toggler:hover {
   cursor: pointer;
@@ -494,8 +495,8 @@ h6 {
   padding: 10px;
   width: 100%;
   height: 100vh;
-  background-color: hsl(268.2deg, 58.6%, 11.4%);
-  z-index: 8888;
+  background-color: hsl(0deg, 0%, 0%);
+  z-index: 999;
   transition: all 0.3s ease-in-out;
 }
 .main-nav.is-active {
@@ -553,8 +554,9 @@ h6 {
   #Z-INDEX
   Loader when active: 9999
   Loader when inactive: -9999
-  Site header: 999
-  Main nav: 8888
+  Site header: 800
+  Nav toggler: 900
+  Main nav: 999
   Contact section title - stroke: 1
   Contact section title - fill: -1
   Polygons: -10
@@ -782,8 +784,13 @@ h6 {
 }
 
 .has-line-through {
-  -webkit-text-decoration: hsl(0deg, 0%, 100%) 3px wavy line-through;
-  text-decoration: hsl(0deg, 0%, 100%) 3px wavy line-through;
+  -webkit-text-decoration-color: hsl(0deg, 0%, 100%);
+  text-decoration-color: hsl(0deg, 0%, 100%);
+  -webkit-text-decoration-line: line-through;
+  text-decoration-line: line-through;
+  -webkit-text-decoration-style: wavy;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 3px;
 }
 
 .about__copy {
@@ -982,6 +989,7 @@ h6 {
   height: 100%;
   border-top: 3px solid hsl(0deg, 0%, 100%);
   background-color: #11071c;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .js-contact__wrapper {
@@ -1060,7 +1068,7 @@ h6 {
 
 .polygon-3 {
   left: 5%;
-  bottom: 15%;
+  bottom: -15%;
   width: 15vw;
   height: 15vw;
   max-width: 250px;

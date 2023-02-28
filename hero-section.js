@@ -232,7 +232,6 @@
         };
 
         const handleStart = (e) => {
-          e.preventDefault();
           window.addEventListener("touchend", handleEnd);
 
           const mouseX = null;
@@ -244,8 +243,6 @@
           updatePt(circles, mouseX, mouseY);
         };
         const handleEnd = (e) => {
-          e.preventDefault();
-
           const mouseX = null;
           const mouseY = null;
 
@@ -4214,7 +4211,7 @@
                     this$1._sketch = sketch;
                     if (isBrowser()) {
                       this$1._keyboardShortcuts.attach();
-                      // window.addEventListener('resize', this$1._resizeHandler);
+                      //   window.addEventListener("resize", this$1._resizeHandler);
                     }
                     this$1._postRender();
                     this$1._sizeChanged();
