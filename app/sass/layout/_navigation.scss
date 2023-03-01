@@ -52,10 +52,15 @@
   }
 }
 
+.fa-bars {
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
 .fa-circle-xmark {
   padding: 30px;
-  font-size: $font-size-title-medium-fallback;
-  font-size: $font-size-title-medium;
+  font-size: $font-size-title-small-fallback;
+  font-size: $font-size-title-small;
   cursor: pointer;
 
   &:hover {

@@ -4,16 +4,21 @@
 
 .site-header {
   position: fixed;
-  left: 0;
+  top: 0;
   right: 0;
+  left: 0;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 20px;
+
+  width: 100%;
+  z-index: 800;
+}
+
+.header__logo-nav-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  top: 30px;
-  width: 100%;
-  z-index: 800;
 }
 
 #site-logo {

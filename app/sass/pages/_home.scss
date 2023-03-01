@@ -9,8 +9,9 @@
   Site header: 800
   Nav toggler: 900
   Main nav: 999
-  Contact section title - stroke: 1
-  Contact section title - fill: -1
+  Contact section title - stroke: 9
+  Contact section title - fill: -9
+  Contact wrapper: 1
   Polygons: -10
   Canvas instruction copy: 99
 \*------------------------------------*/
@@ -182,6 +183,9 @@
   #ABOUT SECTION
 \*------------------------------------*/
 
+#about {
+  padding-top: 100px;
+}
 .about__body {
   color: $color-ntrl-min;
 }
@@ -266,7 +270,7 @@
 \*------------------------------------*/
 
 #work {
-  padding: 100px 0 50px 0;
+  padding-top: 100px;
 }
 
 .work__section-title {
@@ -357,6 +361,7 @@
 #contact {
   position: relative;
   perspective: 1200px;
+  padding-top: 200px;
   height: 1000px;
   // background-color: red;
 }
@@ -364,7 +369,7 @@
 %contact__section-title {
   position: absolute;
   margin: 0 auto;
-  top: 0;
+  top: 100px;
   left: 0;
   right: 0;
   font-size: $font-size-display-large-fallback;
@@ -372,6 +377,14 @@
 
   text-align: center;
   line-height: 100%;
+
+  @include respond-to("medium") {
+    top: 75px;
+  }
+
+  @include respond-to("large") {
+    top: 50px;
+  }
 }
 
 .contact__section-title-stroke {
@@ -379,31 +392,23 @@
   color: transparent;
   -webkit-text-stroke: 1px $color-ntrl-min;
   text-stroke: 1px $color-ntrl-min;
-  z-index: 1;
+  z-index: 9;
 }
 .contact__section-title-fill {
   @extend %contact__section-title;
   color: $color-ntrl-min;
-  z-index: -1;
+  z-index: -9;
 }
 
 .js-contact__wrapper {
   position: relative;
-  top: 50px;
   transform-style: preserve-3d;
   width: 100%;
   height: 100%;
   border-top: 3px solid $color-ntrl-min;
   background-color: $color-base-darker;
   overflow: hidden;
-
-  @include respond-to("medium") {
-    top: 70px;
-  }
-
-  @include respond-to("large") {
-    top: 90px;
-  }
+  z-index: 1;
 }
 
 .contact__profile-pic {

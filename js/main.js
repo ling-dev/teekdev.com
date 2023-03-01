@@ -11,6 +11,30 @@ nav.addEventListener("click", () => {
   nav.classList.toggle("is-active");
 });
 
+const headerScrollTrigger = {
+  trigger: "#about",
+  start: "top center",
+  end: "bottom center",
+  scrub: 1,
+  // markers: true,
+};
+
+gsap.set(".fa-bars", {
+  border: "1px rgba(255, 255, 255, 0) solid",
+  backgroundColor: "rgba(0,0,0,0)",
+});
+
+gsap.to(".fa-bars", {
+  scrollTrigger: headerScrollTrigger,
+  border: "1px rgba(255, 255, 255, 1) solid",
+  backgroundColor: "rgba(0,0,0,1)",
+});
+
+gsap.to("#site-logo", {
+  scrollTrigger: headerScrollTrigger,
+  opacity: 0,
+});
+
 const heroCanvasScrollTrigger = {
   trigger: "#js-canvas__wrapper",
   start: "10% center",
