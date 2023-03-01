@@ -93,7 +93,7 @@ window.addEventListener("load", (event) => {
 gsap.from(".about__body", {
   scrollTrigger: {
     trigger: ".about__body",
-    start: "top center",
+    start: "-20% center",
     end: "bottom center",
     // markers: true,
   },
