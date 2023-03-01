@@ -91,7 +91,12 @@ window.addEventListener("load", (event) => {
 /* About section animation */
 
 gsap.from(".about__body", {
-  scrollTrigger: ".about__body",
+  scrollTrigger: {
+    trigger: ".about__body",
+    start: "top center",
+    end: "bottom center",
+    markers: true,
+  },
   opacity: 0,
   yPercent: 20,
   duration: 1,
