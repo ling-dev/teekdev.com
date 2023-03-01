@@ -95,7 +95,7 @@ gsap.from(".about__body", {
     trigger: ".about__body",
     start: "top center",
     end: "bottom center",
-    markers: true,
+    // markers: true,
   },
   opacity: 0,
   yPercent: 20,
