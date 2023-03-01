@@ -361,7 +361,7 @@
 #contact {
   position: relative;
   perspective: 1200px;
-  padding-top: 200px;
+  padding-top: 120px;
   height: 1000px;
   // background-color: red;
 }
@@ -369,7 +369,7 @@
 %contact__section-title {
   position: absolute;
   margin: 0 auto;
-  top: 100px;
+  top: 70px;
   left: 0;
   right: 0;
   font-size: $font-size-display-large-fallback;
@@ -379,11 +379,11 @@
   line-height: 100%;
 
   @include respond-to("medium") {
-    top: 75px;
+    top: 50px;
   }
 
   @include respond-to("large") {
-    top: 50px;
+    top: 30px;
   }
 }
 

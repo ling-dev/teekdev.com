@@ -474,6 +474,7 @@ h6 {
 }
 
 #site-logo {
+  padding: 0px 10px;
   margin: 0;
   font-style: italic;
 }
@@ -951,7 +952,7 @@ h6 {
 #contact {
   position: relative;
   perspective: 1200px;
-  padding-top: 200px;
+  padding-top: 120px;
   height: 1000px;
 }
 
@@ -959,7 +960,7 @@ h6 {
 .contact__section-title-stroke {
   position: absolute;
   margin: 0 auto;
-  top: 100px;
+  top: 70px;
   left: 0;
   right: 0;
   font-size: 5rem;
@@ -970,13 +971,13 @@ h6 {
 @media (min-width: 768px) {
   .contact__section-title-fill,
   .contact__section-title-stroke {
-    top: 75px;
+    top: 50px;
   }
 }
 @media (min-width: 1024px) {
   .contact__section-title-fill,
   .contact__section-title-stroke {
-    top: 50px;
+    top: 30px;
   }
 }
 
