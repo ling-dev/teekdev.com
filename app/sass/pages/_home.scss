@@ -436,6 +436,13 @@
 
   &:hover {
     text-decoration: underline;
+    color: $color-secondary;
+  }
+}
+
+.fa-linkedin-in {
+  &:hover {
+    color: $color-secondary;
   }
 }
 

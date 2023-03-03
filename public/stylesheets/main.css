@@ -1029,6 +1029,11 @@ h6 {
 }
 .contact__email:hover {
   text-decoration: underline;
+  color: hsl(303deg, 100%, 76.1%);
+}
+
+.fa-linkedin-in:hover {
+  color: hsl(303deg, 100%, 76.1%);
 }
 
 /*------------------------------------*\
