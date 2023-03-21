@@ -359,6 +359,81 @@
 }
 
 /*------------------------------------*\
+  #TECH SECTION
+\*------------------------------------*/
+
+#tech {
+  padding-top: 100px;
+}
+
+.tech__section-title {
+  @extend .work__section-title;
+}
+
+.tech-card__wrapper {
+  @extend .work-card__wrapper;
+  align-items: flex-start;
+}
+
+.tech-card {
+  @extend .work-card;
+  background-color: $color-ntrl-min;
+  color: $color-ntrl-max;
+  border-radius: 25px;
+}
+
+.tech-card__title {
+  padding: 0;
+  margin: 0;
+}
+
+.tech-card__header {
+  margin: 0;
+  padding: 20px 30px;
+  font-size: $font-size-body-large-fallback;
+  font-size: $font-size-body-large;
+  background-color: $color-ntrl-90;
+  border-radius: 25px 25px 0 0;
+}
+
+.tech-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tech-card__list-item {
+  border-top: 1px solid $color-ntrl-80;
+  padding: 20px 30px;
+  display: flex;
+
+  &:hover {
+    background-color: $color-ntrl-90;
+  }
+  &:last-child {
+    border-radius: 0 0 25px 25px;
+  }
+}
+
+.tech-logos {
+  max-height: 30px;
+  max-width: 30px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.typescript-logo {
+  color: $color-ntrl-max;
+}
+
+.tech__name-label {
+  display: block;
+  font-size: $font-size-label-large-fallback;
+  font-size: $font-size-label-large;
+}
+
+/*------------------------------------*\
   #CONTACT SECTION
 \*------------------------------------*/
 
